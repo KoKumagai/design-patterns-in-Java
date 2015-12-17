@@ -1,10 +1,11 @@
-package structural.Adapter2;
+package structural.adapter2;
 
 public class Adaptee {
-    public void method1(){
+    public void method1() {
         System.out.println("method1");
     }
-    public void method2(){
+
+    public void method2() {
         System.out.println("method2");
     }
 }

@@ -7,10 +7,12 @@ public class Leaf extends Component {
         this.name = name;
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     protected void print(String name) {
         System.out.println(name + "-" + this.name);
     }

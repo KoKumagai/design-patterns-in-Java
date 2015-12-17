@@ -3,7 +3,6 @@ package structural.flyweight;
 import java.lang.System;
 
 public class Client {
-
     public static void main(String[] args) {
         FlyweightFactory factory = FlyweightFactory.getInstance();
         Flyweight flyweight1 = factory.getFlyweight(1);

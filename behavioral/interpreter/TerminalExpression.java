@@ -7,6 +7,7 @@ public class TerminalExpression implements AbstractExpression {
         this.data = data;
     }
 
+    @Override
     public boolean interpret(String context) {
         return context.contains(data)? true: false;
     }

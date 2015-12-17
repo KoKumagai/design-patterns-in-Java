@@ -12,18 +12,21 @@ public class Composite extends Component {
         this.name = name;
     }
 
+    @Override
     public String getName() {
         return name;
     }
 
+    @Override
     protected void print(String name) {
         System.out.println(name + "-" + this.name);
         Iterator<Component> it = components.iterator();
-        while (it.hasNext()){
+        while (it.hasNext()) {
             it.next().print(name + "-" + this.name);
         }
     }
 
+    @Override
     public void add(Component component) throws Exception {
         components.add(component);
     }

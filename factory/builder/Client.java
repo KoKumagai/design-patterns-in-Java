@@ -6,5 +6,4 @@ public class Client {
         String result = (String)director.construct();
         System.out.println(result);
     }
-
 }

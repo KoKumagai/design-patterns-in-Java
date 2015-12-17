@@ -1,7 +1,6 @@
 package behavioral.iterator;
 
 public class Client {
-
     public static void main(String[] args) {
         ConcreteAggregate aggregate = new ConcreteAggregate();
         aggregate.addItem(new Item("A"));

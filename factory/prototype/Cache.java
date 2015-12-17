@@ -8,7 +8,7 @@ public class Cache {
     public static Prototype getPrototype(int id) {
         Prototype cachedPrototype = map.get(id);
         return (Prototype)cachedPrototype.createClone();
-     }
+    }
 
     public static void loadCache() {
         ConcretePrototype1 prototype1 = new ConcretePrototype1();

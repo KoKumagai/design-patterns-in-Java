@@ -9,13 +9,13 @@ public class FlyweightFactory {
 
     private FlyweightFactory() {}
 
-    public static FlyweightFactory getInstance(){
+    public static FlyweightFactory getInstance() {
         return singleton;
     }
 
-    public synchronized Flyweight getFlyweight(int id){
+    public synchronized Flyweight getFlyweight(int id) {
         Flyweight flyweight = (Flyweight)map.get(id);
-        if(flyweight == null){
+        if(flyweight == null) {
             flyweight = new Flyweight(id);
             map.put(id, flyweight);
         }

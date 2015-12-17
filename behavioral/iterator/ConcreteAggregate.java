@@ -3,7 +3,7 @@ package behavioral.iterator;
 import java.util.List;
 import java.util.ArrayList;
 
-public class ConcreteAggregate {
+public class ConcreteAggregate implements Aggregate {
     private List<Item> items = new ArrayList<Item>();
 
     public void addItem(Item item) {
@@ -15,9 +15,10 @@ public class ConcreteAggregate {
     }
 
     public Item getItemAt(int index) {
-        return (Item) items.get(index);
+        return (Item)items.get(index);
     }
 
+    @Override
     public Iterator iterator() {
         return new ConcreteIterator(this);
     }

@@ -9,6 +9,7 @@ public class ConcreteHandler2 extends Handler {
         this.num = num;
     }
 
+    @Override
     public void request(int req) {
         if(num == LUKY_NUMBER) {
             System.out.println(name + ": OK!");

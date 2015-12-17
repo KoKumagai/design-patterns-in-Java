@@ -1,10 +1,13 @@
-package structural.Adapter1;
+package structural.adapter1;
 
 public class Adapter extends Adaptee implements Target {
-    public void targetMethod1(){
+    @Override
+    public void targetMethod1() {
         method1();
     }
-    public void targetMethod2(){
+
+    @Override
+    public void targetMethod2() {
         method2();
     }
 }

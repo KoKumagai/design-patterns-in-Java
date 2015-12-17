@@ -1,4 +1,4 @@
-package structural.Adapter2;
+package structural.adapter2;
 
 public abstract class Target {
     public abstract void targetMethod1();

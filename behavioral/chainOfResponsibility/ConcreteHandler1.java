@@ -8,6 +8,7 @@ public class ConcreteHandler1 extends Handler {
         this.num = num;
     }
 
+    @Override
     public void request(int req) {
         if(req < num) {
             System.out.println(name + ": OK!");

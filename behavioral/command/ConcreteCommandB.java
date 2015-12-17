@@ -8,10 +8,12 @@ public class ConcreteCommandB implements Command {
         this.id = id;
     }
 
+    @Override
     public void setReceiver(Receiver receiver) {
         this.receiver = receiver;
     }
 
+    @Override
     public void execute() {
         receiver.action("ConcreteCommandB#execute()" + " : " + id);
     }

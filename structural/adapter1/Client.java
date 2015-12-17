@@ -1,4 +1,4 @@
-package structural.Adapter1;
+package structural.adapter1;
 
 public class Client {
     public static void main(String[] args) {

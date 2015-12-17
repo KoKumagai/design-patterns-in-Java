@@ -8,6 +8,7 @@ public class ConcreteIterator implements Iterator {
         this.concreteAggregate = concreteAggregate;
     }
 
+    @Override
     public boolean hasNext() {
         if (index < concreteAggregate.getSize()) {
             return true;
@@ -16,6 +17,7 @@ public class ConcreteIterator implements Iterator {
         }
     }
 
+    @Override
     public Object next() {
         return concreteAggregate.getItemAt(index++);
     }

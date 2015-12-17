@@ -17,6 +17,6 @@ public class Client {
         b1.run();
 
         AbstractProductB b2 = BFactory.getProductB("B2");
-        b2.run(); 
+        b2.run();
     }
 }

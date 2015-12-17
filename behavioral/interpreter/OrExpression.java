@@ -9,6 +9,7 @@ public class OrExpression implements AbstractExpression {
         this.expressionB = expressionB;
     }
 
+    @Override
     public boolean interpret(String context) {
         return expressionA.interpret(context) || expressionB.interpret(context);
     }
