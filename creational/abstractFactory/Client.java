@@ -1,22 +1,35 @@
-package factory.abstractFactory;
+package creational.abstractFactory;
+
+import creational.abstractFactory.browser.Browser;
+import creational.abstractFactory.factory.AbstractFactory;
+import creational.abstractFactory.factory.FactoryProducer;
+import creational.abstractFactory.os.Os;
 
 public class Client {
+
     public static void main(String[] args) {
-        AbstractFactory AFactory = FactoryProducer.getFactory("A");
+        AbstractFactory osFactory = FactoryProducer.getFactory("OS");
 
-        AbstractProductA a1 = AFactory.getProductA("A1");
-        a1.execute();
+        Os linux = osFactory.getOs("linux");
+        linux.execute(); // Linux is executing programs.
 
-        AbstractProductA a2 = AFactory.getProductA("A2");
-        a2.execute();
+        Os osx = osFactory.getOs("OSX");
+        osx.execute(); // OS X is executing programs.
+
+        Os windows = osFactory.getOs("Windows");
+        windows.execute(); // Windows is executing programs.
 
 
-        AbstractFactory BFactory = FactoryProducer.getFactory("B");
+        AbstractFactory browserFactory = FactoryProducer.getFactory("Browser");
 
-        AbstractProductB b1 = BFactory.getProductB("B1");
-        b1.run();
+        Browser googleChrome = browserFactory.getBrowser("GoogleChrome");
+        googleChrome.render(); // Google Chrome is rendering a website.
 
-        AbstractProductB b2 = BFactory.getProductB("B2");
-        b2.run();
+        Browser microsoftEdge = browserFactory.getBrowser("MicrosoftEdge");
+        microsoftEdge.render(); // Microsoft Edge is rendering a website.
+
+        Browser safari = browserFactory.getBrowser("Safari");
+        safari.render(); // Safari is rendering a website.
     }
+
 }
