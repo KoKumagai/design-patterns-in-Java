@@ -1,9 +1,11 @@
-package factory.prototype;
+package creational.prototype.Game;
 
-public abstract class Prototype implements Cloneable {
+public abstract class Game implements Cloneable {
+
     private int id;
+    protected String type;
 
-    abstract void execute();
+    abstract void play();
 
     public int getId() {
         return id;
@@ -13,7 +15,11 @@ public abstract class Prototype implements Cloneable {
         this.id = id;
     }
 
-    public Object createClone() {
+    public String getType() {
+        return type;
+    }
+
+    public Object clone() {
         Object clone = null;
 
         try {
@@ -21,6 +27,8 @@ public abstract class Prototype implements Cloneable {
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
+
         return clone;
     }
+
 }

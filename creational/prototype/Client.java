@@ -1,13 +1,18 @@
-package factory.prototype;
+package creational.prototype;
+
+import creational.prototype.Game.Game;
+import creational.prototype.Game.GameCache;
 
 public class Client {
+
     public static void main(String[] args) {
-        Cache.loadCache();
+        GameCache.loadCache();
 
-        Prototype clonedPrototype1 = (Prototype)Cache.getPrototype(1);
-        clonedPrototype1.execute();
+        Game clonedGame1 = GameCache.getGame(1);
+        System.out.println("Game type: " + clonedGame1.getType()); // Game type: Action
 
-        Prototype clonedPrototype2 = (Prototype)Cache.getPrototype(2);
-        clonedPrototype2.execute();
+        Game clonedGame2 = GameCache.getGame(2);
+        System.out.println("Game type: " + clonedGame2.getType()); // Game type: Adventure
     }
+
 }
