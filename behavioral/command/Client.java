@@ -1,27 +1,24 @@
 package behavioral.command;
 
+import behavioral.command.command.Command;
+import behavioral.command.command.TelevisionOffCommand;
+import behavioral.command.command.TelevisionOnCommand;
+import behavioral.command.invoker.RemoteControl;
+import behavioral.command.receiver.Television;
+
 public class Client {
+
     public static void main(String[] args) {
-        Command[] commandsA = new Command[3];
-        Command[] commandsB = new Command[3];
+        RemoteControl control = new RemoteControl();
+        Television tv = new Television();
 
-        Receiver receiver = new ConcreteReceiver();
-        Invoker invoker = new Invoker();
+        Command lightsOn = new TelevisionOnCommand(tv);
+        control.setCommand(lightsOn);
+        control.pressButton(); // Power is on.
 
-        for(int i = 0; i < commandsA.length; i++) {
-            commandsA[i] = new ConcreteCommandA(i);
-            commandsA[i].setReceiver(receiver);
-            invoker.addCommnad(commandsA[i]);
-        }
-
-        for(int i = 0; i < commandsB.length; i++) {
-            commandsB[i] = new ConcreteCommandB(i);
-            commandsB[i].setReceiver(receiver);
-            invoker.addCommnad(commandsB[i]);
-        }
-
-        invoker.execute();
-        invoker.undoCommnad();
-        invoker.execute();
+        Command lightsOff = new TelevisionOffCommand(tv);
+        control.setCommand(lightsOff);
+        control.pressButton(); // Power is off.
     }
+
 }
