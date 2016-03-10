@@ -1,26 +1,22 @@
 package behavioral.interpreter;
 
-public class Client {
-    public static AbstractExpression getMaleExpression() {
-        AbstractExpression jack = new TerminalExpression("Jack");
-        AbstractExpression betty = new TerminalExpression("Betty");
-        return new OrExpression(jack, betty);
-    }
+import behavioral.interpreter.expression.Expression;
+import behavioral.interpreter.expression.HangulExpression;
+import behavioral.interpreter.expression.JapaneseExpression;
 
-    public static AbstractExpression getFamilyExpression() {
-        AbstractExpression mikeSmith = new TerminalExpression("Smith");
-        AbstractExpression marySmith = new TerminalExpression("Smith");
-        return new AndExpression(mikeSmith, marySmith);
-    }
+public class Client {
 
     public static void main(String[] args) {
-        AbstractExpression isMale = getMaleExpression();
-        AbstractExpression isFamily = getFamilyExpression();
+        Expression japanse = new JapaneseExpression();
 
-        System.out.println(isMale.interpret("Jack"));
-        System.out.println(isMale.interpret("Mary"));
+        System.out.println(japanse.interpret(1)); // 一
+        System.out.println(japanse.interpret(6)); // 六
 
-        System.out.println(isFamily.interpret("Smith"));
-        System.out.println(isFamily.interpret("Brown"));
+
+        Expression hangul = new HangulExpression();
+
+        System.out.println(hangul.interpret(2)); // 이
+        System.out.println(hangul.interpret(9)); // 구
     }
+
 }
