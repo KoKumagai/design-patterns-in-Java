@@ -1,15 +1,22 @@
 package behavioral.mediator;
 
+import behavioral.mediator.colleague.User;
+
 public class Client {
+
     public static void main(String[] args) {
-        Mediator mediator = new Mediator();
+        User ko = new User("Ko");
+        User gosling = new User("Gosling");
 
-        Colleague tom = new Colleague("Tom");
-        Colleague emily = new Colleague("Emily");
+        ko.sendMessage(gosling, "Hello! How are you?");
+        // From: Ko
+        // To: Gosling
+        // Message: Hello! How are you?
 
-        mediator.createColleagues(emily);
-
-        tom.setMediator(mediator);
-        tom.sendMessage(emily, "Hello!");
+        gosling.sendMessage(ko, "Good! Thank you.");
+        // From: Gosling
+        // To: Ko
+        // Message: Good! Thank you.
     }
+
 }
