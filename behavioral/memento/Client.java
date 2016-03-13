@@ -1,25 +1,30 @@
 package behavioral.memento;
 
+import behavioral.memento.careTaker.Caretaker;
+import behavioral.memento.originator.Originator;
+
 public class Client {
+
     public static void main(String[] args) {
         Originator originator = new Originator();
-        CareTaker careTaker = new CareTaker();
+        Caretaker caretaker = new Caretaker();
 
         originator.setState("first");
+        System.out.println(originator.getState()); // first
+
         originator.setState("second");
-        careTaker.add(originator.save());
+        System.out.println(originator.getState()); // second
+        caretaker.add(originator.saveStateToMemento());
 
         originator.setState("third");
-        careTaker.add(originator.save());
+        System.out.println(originator.getState()); // third
+        caretaker.add(originator.saveStateToMemento());
 
         originator.setState("fourth");
+        System.out.println(originator.getState()); // fourth
 
-        System.out.println(originator.getState());
-
-        originator.getStateFromMemento(careTaker.getMemento(0));
-        System.out.println(originator.getState());
-
-        originator.getStateFromMemento(careTaker.getMemento(1));
-        System.out.println(originator.getState());
+        originator.restoreStateFrom(caretaker.get(1));
+        System.out.println(originator.getState()); // third
     }
+
 }

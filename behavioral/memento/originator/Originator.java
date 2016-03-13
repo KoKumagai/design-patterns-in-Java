@@ -1,6 +1,9 @@
-package behavioral.memento;
+package behavioral.memento.originator;
+
+import behavioral.memento.memento.Memento;
 
 public class Originator {
+
     private String state;
 
     public String getState() {
@@ -11,11 +14,12 @@ public class Originator {
         this.state = state;
     }
 
-    public Memento save() {
+    public Memento saveStateToMemento() {
         return new Memento(state);
     }
 
-    public void getStateFromMemento(Memento memento) {
+    public void restoreStateFrom(Memento memento) {
         state = memento.getState();
     }
+
 }
