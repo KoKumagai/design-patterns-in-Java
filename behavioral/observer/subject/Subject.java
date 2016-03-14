@@ -1,28 +1,32 @@
-package behavioral.observer;
+package behavioral.observer.subject;
+
+import behavioral.observer.observer.Observer;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class Subject {
-    private List<Observer> observers = new ArrayList<Observer>();
-    private String state;
 
-    public String getState() {
+    private int state;
+    private List<Observer> observers = new ArrayList<Observer>();
+
+    public int getState() {
         return state;
     }
 
-    public void setState(String state) {
+    public void setState(int state) {
         this.state = state;
         notifyObservers();
     }
 
-    public void attach(Observer observer) {
+    public void add(Observer observer) {
         observers.add(observer);
     }
 
     public void notifyObservers() {
-        for(Observer observer : observers) {
+        for (Observer observer : observers) {
             observer.update();
         }
     }
+
 }
