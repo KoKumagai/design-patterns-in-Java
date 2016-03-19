@@ -1,23 +1,35 @@
 package structural.composite;
 
+import structural.composite.composite.Directory;
+import structural.composite.leaf.RealFile;
+
 public class Client {
+
     public static void main(String[] args) {
-        Composite compositeA = new Composite("A");
-        Composite compositeB = new Composite("B");
-        Composite compositeC = new Composite("C");
-        Composite compositeD = new Composite("D");
+        Directory rootDirectory = new Directory("root");
+        Directory subDirectory = new Directory("sub");
+        RealFile file1 = new RealFile("file1");
+        RealFile file2 = new RealFile("file2");
 
-        try {
-            compositeA.add(compositeB);
-            compositeA.add(compositeC);
-            compositeB.add(compositeD);
-            compositeC.add(new Leaf("a"));
-            compositeB.add(new Leaf("b"));
-            compositeA.add(new Leaf("c"));
+        subDirectory.add(file1);
+        rootDirectory.add(subDirectory);
+        rootDirectory.add(file2);
 
-            compositeA.print("");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        rootDirectory.ls();
+        /*
+            /root
+            /root/sub
+            /root/sub/file1
+            /root/file2
+         */
+
+
+        rootDirectory.remove(subDirectory);
+        rootDirectory.ls();
+        /*
+            /root
+            /root/file2
+         */
     }
+
 }
