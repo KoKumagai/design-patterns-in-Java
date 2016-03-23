@@ -1,16 +1,38 @@
 package structural.flyweight;
 
-import java.lang.System;
+import structural.flyweight.flyweight.ActionGame;
+import structural.flyweight.flyweightFactory.GameFactory;
+
+import java.util.Random;
 
 public class Client {
-    public static void main(String[] args) {
-        FlyweightFactory factory = FlyweightFactory.getInstance();
-        Flyweight flyweight1 = factory.getFlyweight(1);
-        Flyweight flyweight2 = factory.getFlyweight(2);
-        Flyweight flyweight3 = factory.getFlyweight(1);
 
-        System.out.println("flyweight1: " + System.identityHashCode(flyweight1));
-        System.out.println("flyweight2: " + System.identityHashCode(flyweight2));
-        System.out.println("flyweight3: " + System.identityHashCode(flyweight3));
+    private static final String[] modes = {"easy", "normal", "hard"};
+
+    public static void main(String[] args) {
+        for (int i = 0; i < 5; i++) {
+            int index = new Random().nextInt(modes.length);
+            ActionGame actionGame = (ActionGame) GameFactory.getActionGame(modes[index]);
+            System.out.println("Action game Id: " + System.identityHashCode(actionGame));
+            actionGame.play();
+            /*
+               Action game Id: 1580066828
+               Mode: normal
+               Playing a action game.
+               Action game Id: 491044090
+               Mode: easy
+               Playing a action game.
+               Action game Id: 491044090
+               Mode: easy
+               Playing a action game.
+               Action game Id: 644117698
+               Mode: hard
+               Playing a action game.
+               Action game Id: 491044090
+               Mode: easy
+               Playing a action game.
+             */
+        }
     }
+
 }
