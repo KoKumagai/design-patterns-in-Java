@@ -12,26 +12,28 @@ public class Client {
     public static final int NUMBER_OF_ELEMENTS = 1000000;
 
     public static void main(String[] args) {
-        int[] arr = new int[NUMBER_OF_ELEMENTS];
+        int[] forBubble = new int[NUMBER_OF_ELEMENTS];
+        int[] forInsertion = new int[NUMBER_OF_ELEMENTS];
 
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = new Random().nextInt();
+        for (int i = 0; i < NUMBER_OF_ELEMENTS; i++) {
+            forBubble[i] = new Random().nextInt();
+            forInsertion[i] = new Random().nextInt();
         }
 
         Sorter bubbleSort = new SortTimer(new BubbleSort());
         Sorter insertionSort = new SortTimer(new InsertionSort());
 
-        bubbleSort.sort(arr);
-        // Start: Thu Mar 17 23:50:46 EDT 2016
+        bubbleSort.sort(forBubble);
+        // Start: Mon Mar 28 23:21:59 EDT 2016
         // Sorting...
-        // End: Fri Mar 18 00:22:09 EDT 2016
-        // Time: 1883023.5 ms
+        // End: Mon Mar 28 23:52:09 EDT 2016
+        // Time: 1809567.4 ms
 
-        insertionSort.sort(arr);
-        // Start: Fri Mar 18 00:22:09 EDT 2016
+        insertionSort.sort(forInsertion);
+        // Start: Mon Mar 28 23:52:09 EDT 2016
         // Sorting...
-        // End: Fri Mar 18 00:22:09 EDT 2016
-        // Time: 7.804109 ms
+        // End: Mon Mar 28 23:58:25 EDT 2016
+        // Time: 376502.16 ms
     }
 
 }
