@@ -1,10 +1,10 @@
 package creational.abstractFactory.factory;
 
-import creational.abstractFactory.browser.Browser;
-import creational.abstractFactory.os.Linux;
-import creational.abstractFactory.os.Os;
-import creational.abstractFactory.os.Osx;
-import creational.abstractFactory.os.Windows;
+import creational.abstractFactory.product.Browser;
+import creational.abstractFactory.product.Linux;
+import creational.abstractFactory.product.Os;
+import creational.abstractFactory.product.Osx;
+import creational.abstractFactory.product.Windows;
 
 public class OsFactory extends AbstractFactory {
 

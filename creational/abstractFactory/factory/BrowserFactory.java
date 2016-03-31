@@ -1,10 +1,10 @@
 package creational.abstractFactory.factory;
 
-import creational.abstractFactory.browser.Browser;
-import creational.abstractFactory.browser.GoogleChrome;
-import creational.abstractFactory.browser.MicrosoftEdge;
-import creational.abstractFactory.browser.Safari;
-import creational.abstractFactory.os.Os;
+import creational.abstractFactory.product.Browser;
+import creational.abstractFactory.product.GoogleChrome;
+import creational.abstractFactory.product.MicrosoftEdge;
+import creational.abstractFactory.product.Safari;
+import creational.abstractFactory.product.Os;
 
 public class BrowserFactory extends AbstractFactory {
 

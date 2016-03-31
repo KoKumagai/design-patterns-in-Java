@@ -1,4 +1,4 @@
-package creational.abstractFactory.os;
+package creational.abstractFactory.product;
 
 public class Linux implements Os {
 

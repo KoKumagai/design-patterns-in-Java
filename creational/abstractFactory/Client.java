@@ -1,9 +1,9 @@
 package creational.abstractFactory;
 
-import creational.abstractFactory.browser.Browser;
+import creational.abstractFactory.product.Browser;
 import creational.abstractFactory.factory.AbstractFactory;
 import creational.abstractFactory.factory.FactoryProducer;
-import creational.abstractFactory.os.Os;
+import creational.abstractFactory.product.Os;
 
 public class Client {
 

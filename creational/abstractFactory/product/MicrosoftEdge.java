@@ -1,4 +1,4 @@
-package creational.abstractFactory.browser;
+package creational.abstractFactory.product;
 
 public class MicrosoftEdge implements Browser {
 

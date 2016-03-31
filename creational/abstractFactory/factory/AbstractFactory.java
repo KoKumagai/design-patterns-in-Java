@@ -1,7 +1,7 @@
 package creational.abstractFactory.factory;
 
-import creational.abstractFactory.browser.Browser;
-import creational.abstractFactory.os.Os;
+import creational.abstractFactory.product.Browser;
+import creational.abstractFactory.product.Os;
 
 public abstract class AbstractFactory {
 
