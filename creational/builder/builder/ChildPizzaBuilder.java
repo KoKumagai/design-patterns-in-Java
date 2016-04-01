@@ -1,6 +1,6 @@
 package creational.builder.builder;
 
-import creational.builder.pizza.ChildPizza;
+import creational.builder.product.ChildPizza;
 
 public class ChildPizzaBuilder implements PizzaBuilder {
 

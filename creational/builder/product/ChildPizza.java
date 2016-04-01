@@ -1,4 +1,4 @@
-package creational.builder.pizza;
+package creational.builder.product;
 
 public class ChildPizza extends Pizza {
 

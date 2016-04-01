@@ -1,7 +1,7 @@
-package creational.builder;
+package creational.builder.director;
 
 import creational.builder.builder.PizzaBuilder;
-import creational.builder.pizza.Pizza;
+import creational.builder.product.Pizza;
 
 public class Waiter {
 

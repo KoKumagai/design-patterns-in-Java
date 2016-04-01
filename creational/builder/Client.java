@@ -2,8 +2,9 @@ package creational.builder;
 
 import creational.builder.builder.ChildPizzaBuilder;
 import creational.builder.builder.SpicyPizzaBuilder;
-import creational.builder.pizza.ChildPizza;
-import creational.builder.pizza.SpicyPizza;
+import creational.builder.director.Waiter;
+import creational.builder.product.ChildPizza;
+import creational.builder.product.SpicyPizza;
 
 public class Client {
 
