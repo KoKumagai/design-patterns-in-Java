@@ -1,4 +1,4 @@
-package creational.factoryMethod;
+package creational.factoryMethod.product;
 
 public class ActionGame implements Game {
 

@@ -1,5 +1,8 @@
 package creational.factoryMethod;
 
+import creational.factoryMethod.factory.GameFactory;
+import creational.factoryMethod.product.Game;
+
 public class Client {
 
     public static void main(String[] args) {

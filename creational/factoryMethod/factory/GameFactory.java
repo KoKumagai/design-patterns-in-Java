@@ -1,4 +1,8 @@
-package creational.factoryMethod;
+package creational.factoryMethod.factory;
+
+import creational.factoryMethod.product.ActionGame;
+import creational.factoryMethod.product.AdventureGame;
+import creational.factoryMethod.product.Game;
 
 public class GameFactory {
 
