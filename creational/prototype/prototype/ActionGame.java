@@ -1,4 +1,4 @@
-package creational.prototype.Game;
+package creational.prototype.prototype;
 
 public class ActionGame extends Game {
 

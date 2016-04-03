@@ -1,7 +1,7 @@
 package creational.prototype;
 
-import creational.prototype.Game.Game;
-import creational.prototype.Game.GameCache;
+import creational.prototype.prototype.Game;
+import creational.prototype.prototype.GameCache;
 
 public class Client {
 
