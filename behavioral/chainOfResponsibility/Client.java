@@ -1,9 +1,9 @@
 package behavioral.chainOfResponsibility;
 
-import behavioral.chainOfResponsibility.Logger.FileLogger;
-import behavioral.chainOfResponsibility.Logger.Logger;
-import behavioral.chainOfResponsibility.Logger.StderrLogger;
-import behavioral.chainOfResponsibility.Logger.StdoutLogger;
+import behavioral.chainOfResponsibility.Handler.FileLogger;
+import behavioral.chainOfResponsibility.Handler.Logger;
+import behavioral.chainOfResponsibility.Handler.StderrLogger;
+import behavioral.chainOfResponsibility.Handler.StdoutLogger;
 
 public class Client {
 

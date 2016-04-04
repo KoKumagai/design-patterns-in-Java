@@ -1,4 +1,4 @@
-package behavioral.chainOfResponsibility.Logger;
+package behavioral.chainOfResponsibility.Handler;
 
 public class StdoutLogger extends Logger {
 
