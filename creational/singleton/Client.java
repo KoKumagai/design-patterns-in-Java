@@ -1,5 +1,7 @@
 package creational.singleton;
 
+import creational.singleton.singleton.Singleton;
+
 public class Client {
 
     public static void main(String[] args) {
